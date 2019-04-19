@@ -13,6 +13,27 @@ Output: 10 // 0, 1, 2, 3, 5, 8 중 짝수인 2 + 8 = 10.
 
 public class week02 {
 	
+	/*
+	 * mail_solution
+	 * 이 문제는 N보다 클때까지 피보나치의 수를 구하며 짝수인 피보나치 수를 다 더해주면 됩니다.
+	 * int evenFibSum(int N) {
+		  int sum = 0;
+		  int x = 1;
+		  int y = 2;
+		  while (x <= N) {
+		    if (x % 2 == 0) {
+		      sum += x;
+		    }
+		    int z = x + y;
+		    x = y;
+		    y = z;
+		  }
+		  return sum;
+		}
+	 * 여기서 피보나치 수가 0이 아니고 1부터 시작하는 이유는 x가 0일 경우 sum에 더해도 도움이 되지 않기 때문입니다.
+	 */
+	
+	// my_solution
 	static int result(int n) {
 		int[] fibonacci = new int[n];	// 피보나치 배열
 		fibonacci[0] = 0;
