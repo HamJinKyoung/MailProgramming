@@ -21,23 +21,28 @@ Output: True
  */
 
 public class week04 {
-	static boolean result(int n, int len) {
+	static boolean result(int n) {
 		if(n < 0) {
 			return false;
 		}
-		for(int i = 0; i < len / 2; i++) {
-//			if 맨 앞자리수와 맨뒤자리수가 같으면 continue;
-//			else return false;
-		}
-		return true;
+		
+		int revertedHalf = 0;
+	    while(n > revertedHalf) {
+	        revertedHalf = revertedHalf * 10 + n % 10;
+	        n /= 10;
+	    }
+	    
+	    if(n == revertedHalf || n == revertedHalf/10) {
+	    	return true;
+	    }
+	    else return false;
+		
 	}
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		int n = stdIn.nextInt();
-		int len = (int)Math.log10(n) + 1; // n의 자릿수
-		
-		System.out.println(result(n, len));
+		System.out.println(result(n));
 		stdIn.close();
 	}
 
