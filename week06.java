@@ -7,14 +7,10 @@ import java.util.Comparator;
 Given a list of intervals, merge intersecting intervals.
 
 ¿¹Á¦)
-Input: {{2,4}, 
-		{1,5},
-		{7,9}}
+Input: {{2,4}, {1,5}, {7,9}}
 Output: {{1,5}, {7,9}}
 
-Input: {{3,6}, 
-		{1,3}, 
-		{2,4}}
+Input: {{3,6}, {1,3}, {2,4}}
 Output: {{1,6}}
  */
 
@@ -61,7 +57,7 @@ public class week06 {
 		int[][] arr2 = {{3,6}, {1,3}, {2,4}};
 		
 		Mysolution(arr);
-//		Mysolution(arr2);
+		Mysolution(arr2);
 	}
 	
 

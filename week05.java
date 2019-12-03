@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 /*
 정수 배열과 타겟 숫자가 주어지면, 합이 타겟값이 되는 두 원소의 인덱스를 찾으시오.
@@ -16,7 +15,7 @@ Output: [0, 2] // 배열[0] + 배열[2] = 8
 public class week05 {
 	
 	static void solution(int[] input, int target) {
-		Map map = new HashMap();
+		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < input.length; i++) {
 			int complement = target - input[i];
 			if (map.containsKey(complement)) {

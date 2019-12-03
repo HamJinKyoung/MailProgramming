@@ -14,7 +14,7 @@ public class week07 {
 		String[] words = str.split(" ");
 		String[] reversed = words;
 		for(int i=0; i<words.length; i++) {
-			reversed[i] = new StringBuilder(words[i]).reverse().toString()+" ";	// 맨 뒤에 공백..
+			reversed[i] = new StringBuilder(words[i]).reverse().toString()+" ";	// 맨 뒤에 공백..?
 		}
 		for(int i=0; i<reversed.length; i++) {
 			System.out.print(reversed[i]);
