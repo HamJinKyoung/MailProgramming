@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 /*
 링크드 리스트(linked list)의 머리 노드(head node)와 정수 N이 주어지면, 끝에서 N번째 노드(node)를 제거하고 머리 노드(head node)를 리턴하시오.
 단, 리스트를 한번만 돌면서 풀어야합니다. N은 리스트 길이보다 크지 않습니다.
@@ -16,10 +18,23 @@ Output: null
 */
 
 public class week15 {
+	
+	static LinkedList<Integer> Mysolution(LinkedList<Integer> head, int n) {
+		// LinkedList 사용법 먼저 공부하기
+		// Node..
+		
+		return head;
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		LinkedList<Integer> list = new LinkedList<Integer>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		int n = 2;
+		Mysolution(list, n);
 	}
 
 }
