@@ -1,69 +1,69 @@
-#LinkedList<E>
+# LinkedList<E>
 
-LinkedList<E>´Â List<E> ÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º·Î¼­ °æ·Î¸íÀÌ java.util.LinkedListÀÌ´Ù.
+LinkedList<E>ëŠ” List<E> ì¸í„°í˜ì´ìŠ¤ë¥¼ êµ¬í˜„í•œ í´ë˜ìŠ¤ë¡œì„œ ê²½ë¡œëª…ì´ java.util.LinkedListì´ë‹¤.
 
-LinkedList´Â ¿ä¼ÒµéÀ» ¾ç¹æÇâÀ¸·Î ¿¬°áÇÏ¿© °ü¸®ÇÑ´Ù.
+LinkedListëŠ” ìš”ì†Œë“¤ì„ ì–‘ë°©í–¥ìœ¼ë¡œ ì—°ê²°í•˜ì—¬ ê´€ë¦¬í•œë‹¤.
 
 add(), get()
 
-LinkedList´Â ¸Ç ¾Õ°ú ¸Ç µÚ¸¦ °¡¸®Å°´Â head, tail ·¹ÆÛ·±½º¸¦ °¡Áö°í ÀÖ¾î, ¸Ç ¾ÕÀÌ³ª ¸Ç µÚ, Áß°£¿¡ ¿ä¼ÒÀÇ »ğÀÔÀÌ °¡´ÉÇÏ¸ç ÀÎµ¦½º¸¦ ÀÌ¿ëÇÏ¿© ¿ä¼Ò¿¡ Á¢±ÙÇÒ ¼öµµ ÀÖ´Ù.
+LinkedListëŠ” ë§¨ ì•ê³¼ ë§¨ ë’¤ë¥¼ ê°€ë¦¬í‚¤ëŠ” head, tail ë ˆí¼ëŸ°ìŠ¤ë¥¼ ê°€ì§€ê³  ìˆì–´, ë§¨ ì•ì´ë‚˜ ë§¨ ë’¤, ì¤‘ê°„ì— ìš”ì†Œì˜ ì‚½ì…ì´ ê°€ëŠ¥í•˜ë©° ì¸ë±ìŠ¤ë¥¼ ì´ìš©í•˜ì—¬ ìš”ì†Œì— ì ‘ê·¼í•  ìˆ˜ë„ ìˆë‹¤.
 
-##ÄÃ·º¼ÇÀÇ ¼øÂ÷ °Ë»öÀ» À§ÇÑ Iterator
-Vector, ArrayList, LinkedList, Set°ú °°ÀÌ ¿ä¼Ò°¡ ¼ø¼­´ë·Î ÀúÀåµÈ °É·º¼Ç¿¡¼­ ¿ä¼Ò¸¦ ¼øÂ÷ÀûÀ¸·Î °Ë»öÇÒ ¶§´Â java.util ÆĞÅ°ÁöÀÇ Iterator<E> ÀÎÅÍÆäÀÌ½º¸¦ »ç¿ëÇÏ¸é Æí¸®ÇÏ´Ù.
+## ì»¬ë ‰ì…˜ì˜ ìˆœì°¨ ê²€ìƒ‰ì„ ìœ„í•œ Iterator
+Vector, ArrayList, LinkedList, Setê³¼ ê°™ì´ ìš”ì†Œê°€ ìˆœì„œëŒ€ë¡œ ì €ì¥ëœ ê±¸ë ‰ì…˜ì—ì„œ ìš”ì†Œë¥¼ ìˆœì°¨ì ìœ¼ë¡œ ê²€ìƒ‰í•  ë•ŒëŠ” java.util íŒ¨í‚¤ì§€ì˜ Iterator<E> ì¸í„°í˜ì´ìŠ¤ë¥¼ ì‚¬ìš©í•˜ë©´ í¸ë¦¬í•˜ë‹¤.
 
-Iterator<E> ÀÎÅÍÆäÀÌ½ºÀÇ ¸Ş¼Òµå
-- boolean hasNext() : ¹æ¹®ÇÒ ¿ä¼Ò°¡ ³²¾Æ ÀÖÀ¸¸é true ¸®ÅÏ
-- E next() : ´ÙÀ½ ¿ä¼Ò ¸®ÅÏ
-- void remove() : ¸¶Áö¸·À¸·Î ¸®ÅÏµÈ ¿ä¼Ò Á¦°Å
+Iterator<E> ì¸í„°í˜ì´ìŠ¤ì˜ ë©”ì†Œë“œ
+- boolean hasNext() : ë°©ë¬¸í•  ìš”ì†Œê°€ ë‚¨ì•„ ìˆìœ¼ë©´ true ë¦¬í„´
+- E next() : ë‹¤ìŒ ìš”ì†Œ ë¦¬í„´
+- void remove() : ë§ˆì§€ë§‰ìœ¼ë¡œ ë¦¬í„´ëœ ìš”ì†Œ ì œê±°
 
-##Collections Å¬·¡½º È°¿ë
-java.util ÆĞÅ°Áö¿¡ Æ÷ÇÔµÈ Collections Å¬·¡½º
-- sort() : ÄÃ·º¼Ç¿¡ Æ÷ÇÔµÈ ¿ä¼ÒµéÀÇ Á¤·Ä
-- reverse() : ¿ä¼Ò¸¦ ¹İ´ë ¼øÀ¸·Î Á¤·Ä
-- max(), min() : ¿ä¼ÒµéÀÇ ÃÖ´ñ°ª°ú ÃÖ¼Ú°ª Ã£¾Æ³»±â
-- binarySearch() : ÀÌÁø °Ë»ö
-Collections Å¬·¡½ºÀÇ ¸Ş¼Òµå´Â ¸ğµÎ static Å¸ÀÔÀÌ¹Ç·Î Collections °´Ã¼¸¦ »ı¼ºÇÒ ÇÊ¿äx
+## Collections í´ë˜ìŠ¤ í™œìš©
+java.util íŒ¨í‚¤ì§€ì— í¬í•¨ëœ Collections í´ë˜ìŠ¤
+- sort() : ì»¬ë ‰ì…˜ì— í¬í•¨ëœ ìš”ì†Œë“¤ì˜ ì •ë ¬
+- reverse() : ìš”ì†Œë¥¼ ë°˜ëŒ€ ìˆœìœ¼ë¡œ ì •ë ¬
+- max(), min() : ìš”ì†Œë“¤ì˜ ìµœëŒ“ê°’ê³¼ ìµœì†Ÿê°’ ì°¾ì•„ë‚´ê¸°
+- binarySearch() : ì´ì§„ ê²€ìƒ‰
+Collections í´ë˜ìŠ¤ì˜ ë©”ì†Œë“œëŠ” ëª¨ë‘ static íƒ€ì…ì´ë¯€ë¡œ Collections ê°ì²´ë¥¼ ìƒì„±í•  í•„ìš”x
 
-###Collections Å¬·¡½º¸¦ È°¿ëÇÏ¿© ¹®ÀÚ¿­ Á¤·Ä, ¹İ´ë·Î Á¤·Ä, ÀÌÁø °Ë»öÀ» ½ÇÇàÇÏ´Â »ç·Ê
+### Collections í´ë˜ìŠ¤ë¥¼ í™œìš©í•˜ì—¬ ë¬¸ìì—´ ì •ë ¬, ë°˜ëŒ€ë¡œ ì •ë ¬, ì´ì§„ ê²€ìƒ‰ì„ ì‹¤í–‰í•˜ëŠ” ì‚¬ë¡€
 	import java.util.*;
 	
 	public class CollectionsEx {
-		static void printList(LinkedList<String> l) {	// ¸®½ºÆ®ÀÇ ¿ä¼Ò¸¦ ¸ğµÎ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
-			Iterator<String> iterator = l.iterator();	// Iterator °´Ã¼ ¸®ÅÏ
-			while(iterator.hasNext()) {	// Iterator °´Ã¼¿¡ ¿ä¼Ò°¡ ÀÖÀ» ¶§±îÁö ¹İº¹
-				String e = iterator.next();	// ´ÙÀ½ ¿ä¼Ò ¸®ÅÏ
+		static void printList(LinkedList<String> l) {	// ë¦¬ìŠ¤íŠ¸ì˜ ìš”ì†Œë¥¼ ëª¨ë‘ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
+			Iterator<String> iterator = l.iterator();	// Iterator ê°ì²´ ë¦¬í„´
+			while(iterator.hasNext()) {	// Iterator ê°ì²´ì— ìš”ì†Œê°€ ìˆì„ ë•Œê¹Œì§€ ë°˜ë³µ
+				String e = iterator.next();	// ë‹¤ìŒ ìš”ì†Œ ë¦¬í„´
 				String separator;
 				if(iterator.hasNext())
-					separator = "->";	// ¸¶Áö¸· ¿ä¼Ò°¡ ¾Æ´Ï¸é -> Ãâ·Â
+					separator = "->";	// ë§ˆì§€ë§‰ ìš”ì†Œê°€ ì•„ë‹ˆë©´ -> ì¶œë ¥
 				else
-					separator = "\n";	// ¸¶Áö¸· ¿ä¼ÒÀÌ¸é ÁÙ¹Ù²Ş
+					separator = "\n";	// ë§ˆì§€ë§‰ ìš”ì†Œì´ë©´ ì¤„ë°”ê¿ˆ
 				System.out.print(e+separator);
 			}
 		}
 	
 		public static void main(String[] args) {
-			LinkedList<String> myList = new LinkedList<String>();	// ºó ¸®½ºÆ® »ı¼º
+			LinkedList<String> myList = new LinkedList<String>();	// ë¹ˆ ë¦¬ìŠ¤íŠ¸ ìƒì„±
 			myList.add("a");
 			myList.add("b");
 			myList.add("c");
 			myList.add(0,"d");
 			myList.add(2,"e");
 			
-			Collections.sort(myList);	// ¿ä¼Ò Á¤·Ä
-			printList(myList);	// Á¤·ÄµÈ ¿ä¼Ò Ãâ·Â
+			Collections.sort(myList);	// ìš”ì†Œ ì •ë ¬
+			printList(myList);	// ì •ë ¬ëœ ìš”ì†Œ ì¶œë ¥
 			
-			Collections.reverse(myList);	// ¿ä¼ÒÀÇ ¼ø¼­¸¦ ¹İ´ë·Î ±¸¼º
-			printList(myList);	// ¿ä¼Ò Ãâ·Â
+			Collections.reverse(myList);	// ìš”ì†Œì˜ ìˆœì„œë¥¼ ë°˜ëŒ€ë¡œ êµ¬ì„±
+			printList(myList);	// ìš”ì†Œ ì¶œë ¥
 			
 			int index = Collections.binarySearch(myList, "c")+1;
-			System.out.println("c´Â " + index + "¹øÂ° ¿ä¼ÒÀÔ´Ï´Ù.");
+			System.out.println("cëŠ” " + index + "ë²ˆì§¸ ìš”ì†Œì…ë‹ˆë‹¤.");
 		}
 	}
 	
-½ÇÇà°á°ú
+ì‹¤í–‰ê²°ê³¼
 
 > a->b->c->d->e
 >
 > e->d->c->b->a
 >
-> c´Â 3¹øÂ° ¿ä¼ÒÀÔ´Ï´Ù. 
+> cëŠ” 3ë²ˆì§¸ ìš”ì†Œì…ë‹ˆë‹¤. 
