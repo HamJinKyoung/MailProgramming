@@ -18,12 +18,39 @@ Output: null
 */
 
 public class week15 {
+	class Node {
+		private Object data;
+		private Node next;
+		public Node (Object input) {
+			this.data = input;
+			this.next = null;
+		}
+	}
+	/* 풀이
+	이 문제는 두개의 포인터를 쓰면 쉽게 풀립니다. 첫번째 포인터를 먼저 N만큼 보냅니다. 그리고 첫번째 포인터와 두번째 포인터를 동시에 하나씩 움직입니다.
+	첫번째 포인터의 다음 노드가 null의 값을 가지게 되면, 두번째 포인터의 다음 노드는 끝에서 N번째 노드가 됩니다. 그 노드를 제거 한뒤 머리 노드를 리턴하면 됩니다.
+	중요한 엣지 케이스는, 첫번째 노드를 N번째 옮긴 후 노드의 값이 null이라면 끝에서 N번째 노드는 첫번째 노드임으로 헤드를 업데이트 한후 리턴해줍니다.
+	*/
 	
-	static LinkedList<Integer> Mysolution(LinkedList<Integer> head, int n) {
-		// LinkedList 사용법 먼저 공부하기
-		// Node..
-		
-		return head;
+	static Node solution(Node head, int n) {
+	    if (head == null) {
+	        return null;
+	    }
+	    Node first = head;
+	    Node second = head;
+	    for (int i = 0; i < n; i++) {
+	        first = first.next;
+	    }
+	    if (first == null) {
+	        head = head.next;
+	        return head;
+	    }
+	    while (first.next != null) {
+	        first = first.next;
+	        second = second.next;
+	    }
+	    second.next = second.next.next;
+	    return head;
 	}
 
 	public static void main(String[] args) {
@@ -34,7 +61,7 @@ public class week15 {
 		list.add(4);
 		list.add(5);
 		int n = 2;
-		Mysolution(list, n);
+		solution(list, n);
 	}
 
 }
